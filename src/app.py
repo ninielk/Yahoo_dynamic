@@ -88,8 +88,8 @@ with st.sidebar:
     st.header("Configuration")
     asset_ticker = st.text_input("Ticker ACTIF", value="BTC-USD")
     bench_ticker = st.text_input("Ticker BENCHMARK", value="^GSPC")
-    asset_label = st.text_input("Label ACTIF (optionnel)", value="BTC")
-    bench_label = st.text_input("Label BENCHMARK (optionnel)", value="S&P500")
+    asset_label = st.text_input("Label ACTIF ", value="BTC")
+    bench_label = st.text_input("Label BENCHMARK ", value="S&P500")
 
     # Dates inclusives
     start_date = st.date_input("Date de début", value=pd.to_datetime("2016-01-01").date(), max_value=today)

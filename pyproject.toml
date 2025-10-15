@@ -1,24 +1,27 @@
-[project]
+[tool.poetry]
 name = "yahoo-dynamic"
 version = "0.1.0"
-description = ""
+description = "2-Tickers Streamlit App - Dynamic Yahoo Finance Dashboard"
 authors = [
-    {name = "nini",email = "niama.elkamal@gmail.com"}
+    {name = "nini", email = "niama.elkamal@gmail.com"}
 ]
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = [
-    "yfinance (>=0.2.66,<0.3.0)",
-    "streamlit (>=1.50.0,<2.0.0)",
-    "statsmodels (>=0.14.5,<0.15.0)",
-    "pandas (>=2.3.3,<3.0.0)",
-    "numpy (>=2.3.3,<3.0.0)",
-    "matplotlib (>=3.10.7,<4.0.0)",
-    "scipy (>=1.16.2,<2.0.0)",
-    "dotenv (>=0.9.9,<0.10.0)",
-    "pyyaml (>=6.0.3,<7.0.0)"
-]
 
+# Désactive le mode package pour éviter l'erreur Streamlit Cloud
+package-mode = false
+
+[tool.poetry.dependencies]
+python = ">=3.12"
+yfinance = ">=0.2.66,<0.3.0"
+streamlit = ">=1.50.0,<2.0.0"
+statsmodels = ">=0.14.5,<0.15.0"
+pandas = ">=2.3.3,<3.0.0"
+numpy = ">=2.3.3,<3.0.0"
+matplotlib = ">=3.10.7,<4.0.0"
+scipy = ">=1.16.2,<2.0.0"
+dotenv = ">=0.9.9,<0.10.0"
+pyyaml = ">=6.0.3,<7.0.0"
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
